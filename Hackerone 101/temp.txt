@@ -1,0 +1,16 @@
+5lB9k83P9PZSZMx47FOBb5NOmvReXF3XbcbasvEdewKEojwyxJbYaS8bfxM-mO-Bc-0swTyrf7h5NtP1phWD24pQ!xhjvSQ!f0Z9NVDjc2uH15mf8i3ShLG660sWl690eXkMEYTod5AWkQmzKMhsWBo9UyhMF9SGyvzq5fiUuoaI1qWY2lVihva6xGtv9ePo563Q6AQQrlSUYwVaYaqpog~~
+
+
+Hard (9 / flag)	Encrypted Pastebin	Web, Crypto	1 / 4
+
+^FLAG^ccfc2a0c35fdce272f8004ce9731264aecc55e37c7acf759a407ff739a3fb03b$FLAG$
+Traceback (most recent call last):
+  File "./main.py", line 69, in index
+    post = json.loads(decryptLink(postCt).decode('utf8'))
+  File "./common.py", line 46, in decryptLink
+    data = b64d(data)
+  File "./common.py", line 11, in <lambda>
+    b64d = lambda x: base64.decodestring(x.replace('~', '=').replace('!', '/').replace('-', '+'))
+  File "/usr/local/lib/python2.7/base64.py", line 328, in decodestring
+    return binascii.a2b_base64(s)
+Error: Incorrect padding

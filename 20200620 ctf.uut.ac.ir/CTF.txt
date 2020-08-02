@@ -1,0 +1,107 @@
+cambiaron el dominio porq les hicieron DoS Jjajaja
+http://uutctf.mstajbakhsh.ir/
+
+Misc
+	Collect the Onions
+		abrir http://lyrtt5cc2mfixd5f.onion/ en tor browser
+		UUTCTF{0N10N
+		el fondo tiene muchos numeros, busco el primero en google y me aparece una web y tengo q pagar, es como una serie numerica
+		
+Web
+	let me in
+		http://185.206.93.66:800
+		if you want flag you must pass <a href="http://185.206.93.66:800/auth">this</a> auth ! </h2>
+		GET /auth HTTP/1.1
+		Host: 185.206.93.66:800
+		WWW-Authenticate: Basic realm="test your chance for pass !"
+		
+		pruebo como payload passwords en base64
+		
+		no anda nada, vi el http del principio y está esto
+		Connection: close
+		Content-Length: 176
+		Content-Type: text/html
+		Date: Sat, 20 Jun 2020 11:38:32 GMT
+		ETag: W/"5ed53af0-b0"
+		Last-Modified: Mon, 01 Jun 2020 17:29:20 GMT
+		password: ihateyoucorona
+		Server: nginx/1.14.0 (Ubuntu)
+		username: corona
+		
+		UUTCTF{I_J45T_H4T3_C0R0NA}		
+		
+Forensics
+	WhiteNoise
+		descarga un archivo cifrado con aescrypt 3.11
+		lo descargo y hago un bash para bruteforce (renombro WhiteNoise.bin a .aes, cuando lo descifra crea un archivo WhiteNoise.bin)
+		********************************
+		cat "passwords.txt" | while read line; do
+			aescrypt -d -p $line WhiteNoise.bin.aes
+			if [[ -f WhiteNoise.bin && -s WhiteNoise.bin ]]; then
+				echo -e "\e[32mEnd\033[0m"
+						echo "Password: $line"
+				exit
+			fi
+		done
+		********************************
+		al pedo esto, dieron un hint
+		Hint: "uUt_CtF_2020" leads you to the flag.
+		aescrypt -d -p uUt_CtF_2020 WhiteNoise.bin.aes
+		es un archivo m4a, parece q esta el audio al reves
+		lo converti a mp3 con https://www.zamzar.com/es/convert/m4a-to-mp3/, y lo di vuelta con https://www.mp3-reverser.com/en/
+		congratulations you find uut ctf flag. The flag is weareanonymous
+		probe quichicientas combinaciones de weareanonymous, era con espacios...
+		UUTCTF{we are anonymous}
+		
+Crypto
+	Mess Up - Warm Up	
+		VVVUQ1RGey4tLS0tIC0uIC0gLi4uLS0gLi0uIC4gLi4uLi4gLSAuLi4tLSAtLi4gLS4uLi4tIC4uIC0uIC0uLi4uLSAtLSAtLS0tLSAuLS4gLi4uLi4gLiAtLi4uLi0gLS4tLiAtLS0tLSAtLi4gLi4uLS19
+		UUTCTF{.---- -. - ...-- .-. . ..... - ...-- -.. -....- .. -. -....- -- ----- .-. ..... . -....- -.-. ----- -.. ...--}
+		base64->morse code (decoder online)
+		UUTCTF{1NT3RE5T3D-IN-M0R5E-C0D3}
+		
+		
+Reverse
+	FlaggyBird
+		decompilar con jadx
+		en com.arjundass.flappybird.a esta este switch
+		            switch (this.j) {
+                case 1:
+                    str = "$_$:";
+                    break;
+                case 219:
+                    str = "UUT";
+                    break;
+                case 319:
+                    str = "-CTF";
+                    break;
+                case 419:
+                    str = ":Kn";
+                    break;
+                case 519:
+                    str = "3ll";
+                    break;
+                case 619:
+                    str = "_4_";
+                    break;
+                case 719:
+                    str = "M4s";
+                    break;
+                case 819:
+                    str = "T3r";
+                    break;
+                case 919:
+                    str = "_X";
+                    break;
+                case 1119:
+                    str = "D--";
+                    break;
+                default:
+                    str = "0";
+                    break;
+            }
+		Hint: Split the shown text. Flag is the 3rd part
+		$_$:UUT-CTF:Kn3ll_4_M4sT3r_XD--0
+		UUTCTF{Kn3ll_4_M4sT3r_XD--}
+	Tell Me The Magic Words
+		http://uutctf.mstajbakhsh.ir/files/40fdf48441f417b93a3ef08bc6b86285/MagicWords.apk?token=eyJ1c2VyX2lkIjoxNiwidGVhbV9pZCI6MTEsImZpbGVfaWQiOjE4fQ.Xu5HbQ.pnTfk8_Zggs6hpCr8NdXm39J_Cg

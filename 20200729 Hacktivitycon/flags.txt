@@ -1,0 +1,69 @@
+formato: flag{} - base64(flag{)->ZmxhZw
+Warmup
+	Read the rules
+		flag{its_time_to_hack}
+	caesar mirror
+		flag{julius_in_a_reflection}
+	Common Place
+		http://jh2i.com:50007/.well-known/flag.txt
+		flag{rfc5785_defines_yet_another_common_place}
+	InternetCattos
+		?
+	Hexgedit
+		descargar imagen
+		meterla en https://www.onlineocr.net/es/
+		copiar el hexa y meterlo aca https://www.rapidtables.com/convert/number/hex-to-ascii.html
+		flag{optical_hexadecimal_recognition_amirite}
+		
+	Private Investigator
+		ssh -i id_rsa user@jh2i.com -p 50004 con un archivo id_rsa q nos dan
+		chmod 0600 id_rsa
+		ls
+		cat flag.txt
+		flag{dont_ever_forget_that_newline}
+
+	Vencryption
+		txt cifrado
+		primeras lineas VimCrypt
+		git clone https://github.com/nlitsme/vimdecrypt.git
+		python3 vimdecrypt.py --dictionary /root/tools/__diccionarios/toppasswordsrockyoumini.txt ../vencrypted.txt
+		password computer
+		flag{sometimes_it_really_do_be_like_that_tho}
+
+	spaghetti
+	
+web
+	bite
+		http://jh2i.com:50010/index.php?page=../../../flag.txt%00
+		flag{lfi_just_needed_a_null_byte}
+
+steganography
+		Spy vs. Spy
+			https://aperisolve.fr/
+			flag{two_MAD_spies}
+		Unsubscribe
+			https://www.spammimic.com/decode.cgi
+			flag{hidden_message_in_spam}
+forensics	
+	opposable thumbs
+	descargar archivo abrir con cyberchef y embedded files (la ultima es una imagen)
+	flag{human_after_all}
+
+Scripting
+	Misdirection
+		al ejecutar /site/flag.php, redirecciona a una url asdasdfkshadasdf.php y luego a otra etc.
+		usar el repeater de burp y nos va dando cada uno de los caracteres de la flag (en el navegador devuelve too many redirects)
+		flag{http_302_point_you_in_the_right_redirection}
+	Tootsie pop
+		nos dan un zip para extraer 1548 veces
+		while true; do find . -type f | while read f; do mv "$f" "1";7z -y e "1"; done; done
+		cortar con ctrl+c cuando ya extrajo todo
+		flag{the_answer_is_1548_licks}
+		
+OSINT
+	World Hotspots
+		What can you tell me about 9C:EF:D5:FB:9F:F0?
+		https://macvendors.com/
+		el vendor es Panda Connect S.A.
+		https://www.shodan.io/search?query=org%3A%22Panda+Conect+S.A.%22
+		

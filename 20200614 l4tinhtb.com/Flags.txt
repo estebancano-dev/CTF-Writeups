@@ -1,0 +1,30 @@
+Web
+	Suelto
+		robots.txt -> source.zip
+		es un php. Si se envia content-type con json, va a la segunda parte del if file_get_content(php://input)
+		enviar header json
+		**********************************************
+		POST / HTTP/1.1
+		Host: 45.79.216.154:8585
+		Content-Length: 11
+		Content-Type: json
+		Connection: close
+
+		{"input":0}
+		**********************************************
+		'a string' == 0 es true, porque cualquier string comparada con numero se convierte a entero, como al convertirlo da error (cero), entonces 0 == 0 -> true
+		CL{php_3s_t3rribl3_d3_tr0ll}
+	jojojo
+		al entrar el certificado no corresponde con la ip, al ver el certificado muestra otro sitio
+		issued to s3cr3t4r3a.l4tinhtb.io
+		dig no resuelve nada
+		busque en google, dig al .com, ni idea
+		dirsearch https://45.79.216.154/icons/ (403)
+		
+	que quieres?
+		http://172.104.234.7:8084/
+	
+	A prueba de ...
+		en el fuente esta esto, base64 <!--ACA ALGUNOS SLIDERS ZmxhZ3tFeGMzbDNudDNfRW5jb250cjRzdDNfbDRfZmw0Z30= -->
+		flag{Exc3l3nt3_Encontr4st3_l4_fl4g}
+		
