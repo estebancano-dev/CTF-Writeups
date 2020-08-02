@@ -38,12 +38,12 @@ web
 		flag{lfi_just_needed_a_null_byte}
 
 steganography
-		Spy vs. Spy
-			https://aperisolve.fr/
-			flag{two_MAD_spies}
-		Unsubscribe
-			https://www.spammimic.com/decode.cgi
-			flag{hidden_message_in_spam}
+	Spy vs. Spy
+		https://aperisolve.fr/
+		flag{two_MAD_spies}
+	Unsubscribe
+		https://www.spammimic.com/decode.cgi
+		flag{hidden_message_in_spam}
 forensics	
 	opposable thumbs
 	descargar archivo abrir con cyberchef y embedded files (la ultima es una imagen)
