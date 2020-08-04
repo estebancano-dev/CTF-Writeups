@@ -1,0 +1,19 @@
+POSTDATA =game=spaceinvaders&url=
+http%3A%2F%2Fcdnsinfocol%2Eappspot%2Ecom%2Fwow%2Fwargame%2Fjuegos%2Fspaceinvaders%2Eswf&
+checksum=80325baafcf606ef28b3b60270173ebb
+&name=montoto&score=630
+
+
+POSTDATA =game=spaceinvaders&url=
+http%3A%2F%2Fcdnsinfocol%2Eappspot%2Ecom%2Fwow%2Fwargame%2Fjuegos%2Fspaceinvaders%2Eswf&
+checksum=f3f279d3c94cd11602fe245978e40b33
+name=montoto&score=810
+
+POSTDATA =game=spaceinvaders&url=
+http%3A%2F%2Fcdnsinfocol%2Eappspot%2Ecom%2Fwow%2Fwargame%2Fjuegos%2Fspaceinvaders%2Eswf&
+checksum=c2d7c6a6b56741f7d73b079cc3fcbd41
+&name=montoto&score=510
+
+80325baafcf606ef28b3b60270173ebb
+f3f279d3c94cd11602fe245978e40b33
+c2d7c6a6b56741f7d73b079cc3fcbd41

