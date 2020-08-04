@@ -1,0 +1,57 @@
+try2hack.nl/
+
+level3-.xhtml
+	src JavaScript
+	PASSWORD = "try2hackrawks";
+	CORRECTSITE = "level4-kdnvxs.xhtml";
+level4-kdnvxs.xhtml
+	PasswdLevel4.class
+		 level5-fdvbdf.xhtml
+		 appletking
+		 pieceofcake
+level5-fdvbdf.xhtml
+	abrir el .exe con notepad
+		este lvl no es level6-ksghvb.xhtml
+		necesito decompilar el mierda este
+		no se puede, es una poronga del año cero
+		0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ.,:;-*+=~|&!_$#@()[]{}<\/>
+		http://www.try2hack.nl/levels/level6-ksghvb.xhtml
+		document.write("Level 6 can be found at: "+ 
+                b.substring(0,37) + a.substring(20,21) + a.substring(13,14) + a.substring(28,29) + 
+                a.substring(31,32) + a.substring(11,12) + a.substring(13,14) + b.substring(43,50) + 
+                " Horray!");
+		http://www.try2hack.nl/levels/level6-kdsvbd.xhtml
+		http://www.try2hack.nl/levels/level7-XFKOHC.xhtml
+level6-kdsvbd.xhtml
+	otr vb pero v6. Abro con el wireshark
+	HTTP/1.1 200 OK
+	ETag: "dc-3eda63f0-858b4ff8;;;"
+	Last-Modified: Sun, 01 Jun 2003 20:37:04 GMT
+	Content-Type: application/octet-stream
+	Content-Length: 220
+	Date: Wed, 25 Mar 2020 13:58:12 GMT
+	Accept-Ranges: bytes
+	Server: LiteSpeed
+	Connection: close
+
+	(ENCRYPTION TYPE)
+	B*C*N**N (BACONIAN) https://www.dcode.fr/bacon-cipher
+
+	(USERNAME)
+	aaabb aaaaa aaaab abbab ababb aaaab DABOMB
+
+	(PASSWORD)
+	aabaa abbaa aaaba baaaa babba abbba baaba abaaa abbab abbaa baaaa aaaaa babaa abaab baaab ENCRYPTIONRAWKS
+
+	(PAGE)
+	babab aabab abaab abbab aabbb aaaba XFKOHC
+	http://www.try2hack.nl/levels/level7-xfkohc.php
+http://www.try2hack.nl/levels/level7-xfkohc.php
+		
+	LEVEL 7
+	Browser check: Sorry, but you must use Microsoft Internet Explorer 7.66
+	GET /levels/level7-xfkohc.php HTTP/1.1
+	User-Agent:Mozilla/4.0 (compatible;MSIE 7.66;Linux)
+	Host: www.try2hack.nl
+	referer:http://www.microsoft.com/ms.htm
+http://www.try2hack.nl/levels/level8-balnrg.xhtml
