@@ -1,0 +1,9 @@
+descargo Hacked.puttyexe
+es putty pero se conecta a una IP maliciosa
+
+abro netstat -b -n 5
+
+al conectarme con putty a 1.1.1.1, tarda, y el ip destino es 31.33.3.37
+
+
+rta=EKO{31.33.3.37}

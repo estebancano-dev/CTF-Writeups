@@ -1,0 +1,5 @@
+abro con el notepad++ y veo PK, es un zip, extraigo y busco
+
+hay un archivo "secret", con la receta secreta de la coca cola
+
+rta=EKO{so_much_cok3}

@@ -1,0 +1,12 @@
+Descargo flag.7z, y tiene un txt comprimido con un base64 gigante.
+Hago decode y tengo otro base64, decode de nuevo y otra vez.
+
+$fh = file_get_contents("out.txt");
+for ($i = 0; $i < 300; $i++) {
+    $fh = base64_decode($fh);
+    file_put_contents("s$i" . ".txt", $fh);
+}
+
+iteracion 48 tengo la flag
+
+rta=EKO{recursion_ftw!}

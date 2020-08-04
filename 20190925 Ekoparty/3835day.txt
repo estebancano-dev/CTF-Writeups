@@ -1,0 +1,14 @@
+An unknown software in the company was targeted with an old exploit, your task is to identify the CVE associated with this hacking attempt.
+
+Format EKO{CVE-####-####}
+
+Attachment
+3835day.zip
+
+
+
+resto al 25/09/2019 3835 dias, me da 26 de marzo de 2009, https://www.cvedetails.com/vulnerability-list.php?vendor_id=0&product_id=0&version_id=0&page=2&hasexp=0&opdos=0&opec=0&opov=0&opcsrf=0&opgpriv=0&opsqli=0&opxss=0&opdirt=0&opmemc=0&ophttprs=0&opbyp=0&opfileinc=0&opginf=0&cvssscoremin=0&cvssscoremax=0&year=2009&month=3&cweid=0&order=1&trc=554&sha=f3e0efcba8f2e57e372774cfce4cc648e5548ccb
+
+busco .zip y pruebo,
+
+rta=CVE-2009-1028
