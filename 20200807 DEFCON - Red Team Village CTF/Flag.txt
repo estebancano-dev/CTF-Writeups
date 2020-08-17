@@ -1,0 +1,52 @@
+Programming
+	Ping Pong 2
+		python:
+		from pwn import remote
+		import re
+		import string
+
+		r = remote("164.90.147.2", 2346)
+
+		rec = r.recv().decode()
+		#print(rec)
+		rec = r.recv().decode().strip('\n')
+		print(rec,end ="")
+		while not '}' in rec:
+			r.send(str(rec))
+			rec = r.recv().decode().strip('\n')
+			print(rec, end ="")
+
+		TS{YouGottaGetQuickToScoreTheFlag}
+		
+Pwn
+	ltrace-easy
+		strings ltrace-easy
+		TS{whydidyouevenrunit}
+		
+Forensics
+	just a nice picture
+		open with cyberchef and use "extract files". Download the zip (before last one)
+		crack zip password with https://github.com/The404Hacking/ZIP-Password-BruteForcer
+		Password123
+		flag{f93kfaskdif92}
+	Tom Nook - 1D - Internet Traffic
+		open with wireshark
+		File->Export objects->HTML
+		open one of the files exported.
+		SecretACBankStatement.zip
+
+	Tom Nook - 1F - Internet Traffic
+		open SecretACBankStatement.zip from las chall. Remove all characters before PK and the last ones (boundary --------------------------fbfebdc7b49dbf68--)
+		crack zip password with https://github.com/The404Hacking/ZIP-Password-BruteForcer
+		monkey123
+		TS{TomNookDrivesTheBoat}
+	Tom Nook - 1E - Internet Traffic
+		the password from last challenge
+		monkey123
+		flag{f93kfaskdif92}
+
+Joe_Exotic_Strikes_Back_hard
+	Joe Exotic Strikes Back Target 1 Flag 0
+		dirsearch, robots.txt
+		TS{27f5e15b6af3223f1176293cd015771d}
+	
