@@ -1,1 +1,1 @@
-Once Ekoparty Pre-CTF is finished i will publish all my writeups
+Writeups del Pre-CTF de la Ekoparty 2020
