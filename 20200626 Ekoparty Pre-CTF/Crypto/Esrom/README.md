@@ -7,3 +7,5 @@ Utilizo https://www.dcode.fr/morse-code
 THIS IS THE FLAG YOU ARE LOOKING FOR: MORSEMORSE
 
 #### EKO{morsemorse}
+
+Resuelto por: [@josefigueredo](https://twitter.com/josefigueredo" "@josefigueredo")
