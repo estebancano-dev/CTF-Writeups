@@ -8,4 +8,4 @@ THIS IS THE FLAG YOU ARE LOOKING FOR: MORSEMORSE
 
 #### EKO{morsemorse}
 
-Resuelto por: [@josefigueredo](https://twitter.com/josefigueredo" "@josefigueredo")
+Resuelto por: [@josefigueredo](https://twitter.com/josefigueredo "@josefigueredo")
