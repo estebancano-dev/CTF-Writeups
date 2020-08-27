@@ -37,10 +37,12 @@ a.sfattr.list[0].value = "R"
 
 Para listar todos los atributos extendidos de los inode, hacer un archivo x.txt con lo que sigue, sumando 1 al inode en cada vez (hasta el 30000)
 
+```
 inode 19335
 p
 inode 19336
 p
+```
 etc
 
 ```bash
