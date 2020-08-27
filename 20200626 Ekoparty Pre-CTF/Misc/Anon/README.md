@@ -1,7 +1,7 @@
 > This group es too paranoid
 http://paste.ubuntu.com/p/HnGHwGk4rQ/
 
-nos dan un pastebin con 5 links, uno es 200, el resto no. Hacer un script q parsee y vaya entrando a cada uno, si es 200, parsea otra vez
+nos dan un pastebin con 5 links, uno da HTTP Response 200, el resto no. Hacer un script q parsee y vaya entrando a cada uno, si es 200, parsea otra vez
 
 php
 ```php
