@@ -60,7 +60,7 @@ T05Be0tuMChraW5fSW50UjBfSGU0dmVOfQ== (base64)
 
 un jar (buscaminas)
 decompilar con jadx
-hay un string en 
+hay un array con enteros en la clase 'e' 
 116 104 101 32 102 108 97 103 32 105 115 32 104 105 100 100 101 110 32 117 115 105 110 103 32 116 104 105 115 32 115 101 99 114 101 116 32 83 116 114 105 110 103 44 32 112 108 101 97 115 101 32 115 116 111 114 101 32 116 104 105 115 32 115 111 109 101 119 104 101 114 101 32 115 97 102 101 46 46 46 55 7 11 71 20 13 21 18 76 8 7 73 7 7 23 68 28 1 85 85 36 38 32 70 1 85 72 29 27 69 83 35 15 19 2 84 73 32 78 82 38 32 38 87 77 65 2 86 69 93 75 14 7 28 10 32 86 127 52 26 12 44 109 26 33 8 80 40 45 19 65 23 89 4 85 3 23 75 15 83
 
 ```php
@@ -82,9 +82,9 @@ the flag is hidden using this secret String, please store this somewhere safe...
 LIDUU$& FUHES#TI NR& &WMAVE]K
  V4,m!P(-AYUKS
 ```
+En la misma clase 'e', muestra como decodificar esos valores en la linea `this.c[i3 % 80] = (char) (iArr2[i3 % 80] ^ this.b[i2]);`
 
-
-Utilizando Cyberchef, realizar XOR de `7G
+El simbolo ^ corresponde a XOR en Java, por lo tanto utilizando Cyberchef, realizo XOR de `7G
 LIDUU$& FUHES#TI NR& &WMAVE]K
  V4,m!P(-AYUKS` con el texto plano `the flag is hidden using this secret String, please store this somewhere safe...`
 
