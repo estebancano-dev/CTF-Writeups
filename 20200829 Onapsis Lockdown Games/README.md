@@ -318,6 +318,7 @@ Decrypted= the secret flag is ona{hackers.love.randoms}
 mayuscula? minuscula? ayudaaaaaaaa (lo mando asi _BrOoDkIlLeR_ona{hackers.love.randoms})
 
 PD1: lo comparé con el de nullp0inter y es correcto!
+
 PD2: hackers.love.randoms, no mucho, el script lo tuve q modificar agregando la deteccion de lowercase ona{ porq se ve que lo pasé de largo
 
 \#OnaChallenge_Flag
