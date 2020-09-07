@@ -61,7 +61,7 @@ foreach($arre as $v){
 	$salida.=chr($v);
 }
 echo base64_encode($salida);
-	```
+```
 
 dGhlIGZsYWcgaXMgaGlkZGVuIHVzaW5nIHRoaXMgc2VjcmV0IFN0cmluZywgcGxlYXNlIHN0b3JlIHRoaXMgc29tZXdoZXJlIHNhZmUuLi43BwtHFA0VEkwIB0kHBxdEHAFVVSQmIEYBVUgdG0VTIw8TAlRJIE5SJiAmV01BAlZFXUsOBxwKIFZ/NBoMLG0aIQhQKC0TQRdZBFUDF0sPUw==
 
@@ -70,6 +70,7 @@ the flag is hidden using this secret String, please store this somewhere safe...
 LIDUU$& FUHES#TI NR& &WMAVE]K
  V4,m!P(-AYUKS
 ```
+
 
 Utilizando Cyberchef, realizar XOR de `7G
 LIDUU$& FUHES#TI NR& &WMAVE]K
