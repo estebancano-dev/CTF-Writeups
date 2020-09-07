@@ -10,6 +10,8 @@ Es más, si al iniciar el debugging busco Intermodular calls (llamadas a libreri
 
 Utilizo x64dbg y [este](https://github.com/x64dbg/Scripts/blob/master/UPX%20X.XX%20OEP%20Finder.txt "este") script que encuentra el OEP (Original Entry Point) del código real
 
+El OEP se encuentra en 00000000001C5480 y salta a 00000000001C1E00
+
 Establezco breakpoint en kernel32.ExitProcess (search for->intermodular calls)
 
 la flag está ahi en el dump (4 instrucciones más abajo del ExitProcess)
