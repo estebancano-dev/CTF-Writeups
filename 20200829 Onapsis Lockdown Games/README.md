@@ -219,25 +219,31 @@ public class HelloWorld{
 
 Como resultado obtengo el archivo [resultado2.txt](https://github.com/estebancano-dev/CTF-Writeups/blob/master/20200829%20Onapsis%20Lockdown%20Games/resultado2.txt?raw=true "resultado2.txt"), con más cadenas descifradas como por ejemplo:
 
->Decrypted = Super_Secret_Password_123.
+```
+Decrypted = Super_Secret_Password_123.
 Decrypted = a97d075868437cdeabb692969ba18a63
 Decrypted = agent. mission bravo dessert needs autorization
 Decrypted = mission have green light
 Decrypted = requesting target list
 Decrypted = take down targets. snake. loki. the king. gladiator
+```
 
 o tambien
 
->Decrypted = information english. bad guys recovered messaging software
+```
+Decrypted = information english. bad guys recovered messaging software
 Decrypted = increasing defenses
 Decrypted = information english. enemy is trying to recover the flag
 Decrypted = flag is protected
 Decrypted = information english. taking undercover
 Decrypted = ACK
+```
 
 o tambien este hash que está solito y no se que para que carajo sirve (o que es, en google no sale nada). Probé usarlo como key pero nop..
 
->a97d075868437cdeabb692969ba18a63
+```
+a97d075868437cdeabb692969ba18a63
+```
 
 Por ahora, la flag brilla por su ausencia.
 
