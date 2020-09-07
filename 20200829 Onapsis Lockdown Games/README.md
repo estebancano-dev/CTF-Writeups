@@ -290,6 +290,7 @@ public class HelloWorld {
     }
 }
 ```
+
 Hice bruteforce de todo el rango entre el menor y mayor de los timestamps que encontré. En una de las iteraciones obtengo lo siguiente:
 
 `Timestamp=1597869033592 - Key=ÃšÃ¥Ã¦*tbÂ¾ÂºiLÃ¤Ã›ÃŒÃª"^BÃ…Ã	Ã”Ã¶ÂµÃ¾Â°EÂ¶BNÂ©?Â¸&:EÃ˜ - Decrypted = the secret flag is ONA{}`
@@ -300,7 +301,8 @@ Luego de 10000 idas y vueltas, comparé el hash de nullp0inter (que ya solucion�
 
 Cabe destacar que la flag final la encontré mientras escribía esta linea anterior a la que estas leyendo!!
 
->Decrypted= agent. operation storm trap has been compromised
+```
+Decrypted= agent. operation storm trap has been compromised
 Decrypted= please provide information about casualties
 Decrypted= four casualties by enemy fire
 Decrypted= enemies casualties
@@ -310,6 +312,7 @@ Decrypted= enemy increasing number
 Decrypted= return to the base. you will need the flag. no further instructions until extraction
 Decrypted= the secret flag is ONA{}
 Decrypted= the secret flag is ona{hackers.love.randoms}
+```
 
 #### Flag: ona{hackers.love.randoms}        
 mayuscula? minuscula? ayudaaaaaaaa (lo mando asi _BrOoDkIlLeR_ona{hackers.love.randoms})
@@ -320,8 +323,8 @@ PD2: hackers.love.randoms, no mucho, el script lo tuve q modificar agregando la 
 \#OnaChallenge_Flag
 76d5b47693dc69ab3292d91c151447140178ec0d5b2e55bd0e2947618debe7ab48b2f4d236c177e350bbebc06ca24a18fe45c5d71fe1c7aeb53c7813a407555b
 
-##PD RECIEN VEO LA DESCRIPCION DE LOS CHALLENGES CIFRADOS CON RC4 !!!!!!!!!!!!!
+## PD RECIEN VEO LA DESCRIPCION DE LOS CHALLENGES CIFRADOS CON RC4 !!!!!!!!!!!!!
 ## LEI EL DEL ULTIMO Y ME DA LA SENSACIÓN QUE ME COMPLICABA MAS SABER ESO
 
-#FIN
+# FIN
 Cualquier cosa que quieras saber, preguntá que no molesta!
