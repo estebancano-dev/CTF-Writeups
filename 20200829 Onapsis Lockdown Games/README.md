@@ -167,7 +167,7 @@ public class HelloWorld{
 				decData = "";
 			}
 			for (int i = 0; i < decData.length(); i++) {
-			   sb.append((char) (decData.charAt(i) ^ key.charAt(i % 26)));
+		   		sb.append((char) (decData.charAt(i) ^ key.charAt(i % 26)));
 			}
 			System.out.println("Decrypted = " + sb.toString().replace("~", " ").replace("|", "."));
 		}
