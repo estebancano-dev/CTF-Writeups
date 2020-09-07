@@ -41,7 +41,7 @@ Lo abrí con el Winamp (Si, todavia lo uso) y en file info (Alt+3) vi que tenia 
 
 `SGVsbG8gR3V5cywgaGVyZSBhcmUg` que decodifica en base 64 a `Hello Guys, here are`
 
-parecia incompleto asi que busqué extraer la 'exif information'. Yo tengo una utilidad que al apretar boton derecho en el archivo me la muestra (MediaInfo, viene con el klite codec pack).
+parecia incompleto asi que busqué extraer la 'exif information'. Yo tengo una utilidad que al apretar boton derecho en el archivo me la muestra (MediaInfo, viene con el klite codec pack). Sino utilizar https://mediaarea.net/MediaInfoOnline
 
 Puedo ver lo que muestra la siguiente imagen: [exif.jpg](https://github.com/estebancano-dev/CTF-Writeups/blob/master/20200829%20Onapsis%20Lockdown%20Games/exif.jpg?raw=true "exif.jpg")
 
