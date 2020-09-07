@@ -34,8 +34,20 @@ a149cb7eb23404afc85b7f2c481772f50603d34c1ce6c07a2c1067c34e4b488b0308a175f3db3fe9
 ## LVL 2
 >Archivo: [LVL 2](https://github.com/estebancano-dev/CTF-Writeups/blob/master/20200829%20Onapsis%20Lockdown%20Games/Niveles/Lvl2.7z?raw=true "LVL 2")
 
-Abrir comprimido. El archivo .music es un mp3, exif information
-flag T05Be0tuMChraW5fSW50UjBfSGU0dmVOfQ== (base64)
+Abrir comprimido. El archivo .music es un mp3 codificado en base64.
+
+Decodificarlo y guardarlo como archivo.mp3
+Lo abrí con el Winamp (Si, todavia lo uso) y en file info (Alt+3) vi que tenia un comentario sospechoso. 
+
+`SGVsbG8gR3V5cywgaGVyZSBhcmUg` que decodifica en base 64 a `Hello Guys, here are`
+
+parecia incompleto asi que busqué extraer la 'exif information'. Yo tengo una utilidad que al apretar boton derecho en el archivo me la muestra (MediaInfo, viene con el klite codec pack).
+
+Puedo ver lo que muestra la siguiente imagen: [exif.jpg](https://github.com/estebancano-dev/CTF-Writeups/blob/master/20200829%20Onapsis%20Lockdown%20Games/exif.jpg?raw=true "exif.jpg")
+
+Abajo de todo el choclo completo en base 64 hay un tag FLAG. 
+
+T05Be0tuMChraW5fSW50UjBfSGU0dmVOfQ== (base64)
 
 #### Flag: ONA{Kn0(kin_IntR0_He4veN}
 
