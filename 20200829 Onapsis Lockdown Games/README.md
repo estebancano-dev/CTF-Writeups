@@ -16,7 +16,7 @@ Twittear:
 ------------
 ------------
 
-##LVL 1
+## LVL 1
 >Archivo: [LVL 1](https://github.com/estebancano-dev/CTF-Writeups/blob/master/20200829%20Onapsis%20Lockdown%20Games/Niveles/Lvl1.7z?raw=true "LVL 1")
 
 En el código, el string HASH es lmhash (era  ONA{0NEW4YF()}). Traté de bruteforcear el código, pero no me funcionó. Luego vi que la gente de Onapsis envió este mensaje:
@@ -26,24 +26,24 @@ En el código, el string HASH es lmhash (era  ONA{0NEW4YF()}). Traté de brutefo
 Vuelvo a probar de crackear el hash de la variable HASH del principio
 crackear en http://rainbowtables.it64.com/
 
-####Flag: ONA{HASH||GO~}
+#### Flag: ONA{HASH||GO~}
 
 \#OnaChallenge_Flag 
 a149cb7eb23404afc85b7f2c481772f50603d34c1ce6c07a2c1067c34e4b488b0308a175f3db3fe93632a493040733b49b6d014be1756e4de17eb12fdd9a3993
 
-##LVL 2
+## LVL 2
 >Archivo: [LVL 2](https://github.com/estebancano-dev/CTF-Writeups/blob/master/20200829%20Onapsis%20Lockdown%20Games/Niveles/Lvl2.7z?raw=true "LVL 2")
 
 Abrir comprimido. El archivo .music es un mp3, exif information
 flag T05Be0tuMChraW5fSW50UjBfSGU0dmVOfQ== (base64)
 
-####Flag: ONA{Kn0(kin_IntR0_He4veN}
+#### Flag: ONA{Kn0(kin_IntR0_He4veN}
 
 \#OnaChallenge_Flag 
 7840235e32cce7866592f46d8ed329052cbec0e1ba6c2af989b0e4ddf5bf2890dc4a62d03cdd3aa35e3eb7e6f2f6ae046d707c78fffa8623443a6589c1784a89
 
 
-##LVL 3
+## LVL 3
 >Archivo: [LVL 3](https://github.com/estebancano-dev/CTF-Writeups/blob/master/20200829%20Onapsis%20Lockdown%20Games/Niveles/Lvl3.7z?raw=true "LVL 3")
 
 un jar (buscaminas)
@@ -83,7 +83,7 @@ Nota: (Agregué Un Espacio Despues Del @ Para Que No Genere Un Handle)
 \#OnaChallenge_Flag 
 ad173c3a444ab6c3300c8683bed3254053bc22c912935acbbae312a41a435586eb513c6e7d2117d824b7062d80897b503c73b23631203c5f465590d27648f6ff
 
-##LVL 4 - MazeRuner
+## LVL 4 - MazeRuner
 >Archivo: [LVL 4](https://github.com/estebancano-dev/CTF-Writeups/blob/master/20200829%20Onapsis%20Lockdown%20Games/Niveles/Lvl4.7z?raw=true "LVL 4")
 
 En la funcion printPath, hay una variable _SYS_DEV_SIGN que permite al binario ejecutarse en modo "debug". 
@@ -101,7 +101,7 @@ Busco manualmente la mejor ruta al cuadrado azul y lo recorro, como muestra la i
 \#OnaChallenge_Flag 
 f704036f10df45ea26ee15b9790c21b5dd5bbbe02b4c4e6355520768fc89b9d978f69a1a3b6678b0af0ce3042ff69dea3bb5756efe9cbffa90a38abf8833c93c
 
-##LVL 5 - sudoku
+## LVL 5 - sudoku
 >Archivo: [LVL 5](https://github.com/estebancano-dev/CTF-Writeups/blob/master/20200829%20Onapsis%20Lockdown%20Games/Niveles/Lvl5.7z?raw=true "LVL 5")
 
 Pasos para resolver el reto (seguirlos al pie de la letra sino no funciona):
@@ -112,12 +112,12 @@ Pasos para resolver el reto (seguirlos al pie de la letra sino no funciona):
 
 En la primera vez que jugamos nos da una parte de la flag, y en la segunda el resto. Es el único reto que pasé "jugando"
 
-####Flag: ONA{sUd0_5uDO_5Ud0KUuu!!!}
+#### Flag: ONA{sUd0_5uDO_5Ud0KUuu!!!}
 
 \#OnaChallenge_Flag
 3a5cd7a672f0fa1ad7b9ae1259294d6a1f7e8ef0e9cd97a5c98aff936f72fc6800b92b524806d12b7c6b1f41a337bf803747ab4080458ed3accbef261895ad0f
 
-##LVL 6 - CLIENT/SERVER
+## LVL 6 - CLIENT/SERVER
 >Archivo: [LVL 6](https://github.com/estebancano-dev/CTF-Writeups/blob/master/20200829%20Onapsis%20Lockdown%20Games/Niveles/Lvl6.7z?raw=true "LVL 6")
 
 *Primero que nada aclarar que nunca pude ejecutar el Cliente, me tiraba "Exception: java.lang.NullPointerException thrown from the UncaughtExceptionHandler in thread "main"", 
@@ -304,7 +304,7 @@ Decrypted= return to the base. you will need the flag. no further instructions u
 Decrypted= the secret flag is ONA{}
 Decrypted= the secret flag is ona{hackers.love.randoms}
 
-####Flag: ona{hackers.love.randoms}        
+#### Flag: ona{hackers.love.randoms}        
 mayuscula? minuscula? ayudaaaaaaaa (lo mando asi _BrOoDkIlLeR_ona{hackers.love.randoms})
 
 PD1: lo comparé con el de nullp0inter y es correcto!
@@ -314,7 +314,7 @@ PD2: hackers.love.randoms, no mucho, el script lo tuve q modificar agregando la 
 76d5b47693dc69ab3292d91c151447140178ec0d5b2e55bd0e2947618debe7ab48b2f4d236c177e350bbebc06ca24a18fe45c5d71fe1c7aeb53c7813a407555b
 
 ##PD RECIEN VEO LA DESCRIPCION DE LOS CHALLENGES CIFRADOS CON RC4 !!!!!!!!!!!!!
-##LEI EL DEL ULTIMO Y ME DA LA SENSACIÓN QUE ME COMPLICABA MAS SABER ESO
+## LEI EL DEL ULTIMO Y ME DA LA SENSACIÓN QUE ME COMPLICABA MAS SABER ESO
 
 #FIN
 Cualquier cosa que quieras saber, preguntá que no molesta!
