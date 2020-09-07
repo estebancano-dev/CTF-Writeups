@@ -90,7 +90,7 @@ ad173c3a444ab6c3300c8683bed3254053bc22c912935acbbae312a41a435586eb513c6e7d2117d8
 En la funcion printPath, hay una variable _SYS_DEV_SIGN que permite al binario ejecutarse en modo "debug". 
 Tambien probé el parámetro -Debug (creo q era asi) pero no me funcionó del todo, porque faltaban los parches.
 
-Parcheo las instrucciones como indico en la siguiente imagen [patch.jpg](https://github.com/estebancano-dev/CTF-Writeups/blob/master/20200829%20Onapsis%20Lockdown%20Games/patch.jpg "patch.jpg")
+Parcheo las instrucciones como indico en la siguiente imagen [patch.jpg](https://github.com/estebancano-dev/CTF-Writeups/blob/master/20200829%20Onapsis%20Lockdown%20Games/patch.jpg?raw=true "patch.jpg")
 
 Al ejecutar el proceso, se muestra el maze pero en vez de blanco, en color verde los caminos posibles.
 Busco manualmente la mejor ruta al cuadrado azul y lo recorro, como muestra la imagen (la ruta la pinté de blanco)
