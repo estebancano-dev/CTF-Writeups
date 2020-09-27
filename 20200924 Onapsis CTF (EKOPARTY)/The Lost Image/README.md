@@ -1,4 +1,4 @@
-> lost image
+> lost image: Hi there, You don't need to thank me. See you next time. Bests, Hurley. P.S: Apply sha256 to the code.
 
 File: [image.txt](https://raw.githubusercontent.com/estebancano-dev/CTF-Writeups/master/20200924%20Onapsis%20CTF%20(EKOPARTY)/The%20Lost%20Image/thelostimage.txt "image.txt")
 
