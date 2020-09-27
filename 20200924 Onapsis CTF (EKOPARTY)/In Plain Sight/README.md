@@ -29,4 +29,4 @@ If we show all characters, we can see blank spaces and tabs at the end of every 
 
 So i executed `stegsnow -C out.txt` where `out.txt` has the above text
 
-#### EKO{s0_m4ny_w4yZ_0f_h1d1ng_d4t4}
+#### ONA{s0_m4ny_w4yZ_0f_h1d1ng_d4t4} -> ONA{85af7b7c4042e2692072382ce8e0311f8c68993c3ddaf3d32b55cc6c5daac4c5}

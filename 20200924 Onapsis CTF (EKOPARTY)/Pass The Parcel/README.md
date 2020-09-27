@@ -73,4 +73,4 @@ Give both of them the original file and will solve the challenge extracting 250 
 
 The tricky part of this challenge was the escaping nightmare when calling 7z with the password: it has so many special characters, so in php i solved it with `escapeshellarg()` function and in python with ` shlex.quote()` function
 
-#### EKO{i_hope_you_found_me_with_a_script}
+#### ONA{i_hope_you_found_me_with_a_script} -> ONA{1bcdce133fa69cc9ef5a653663a4608514641e12b913063687d34fb18271e1b1}

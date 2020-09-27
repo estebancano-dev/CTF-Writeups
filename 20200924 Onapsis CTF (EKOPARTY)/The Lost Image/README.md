@@ -35,4 +35,4 @@ while (($line = fgets($handle)) !== false) {
 In image 8.jpg we can see the flag
 TheDharmaInitiative
 
-#### EKO{TheDharmaInitiative}
+#### ONA{TheDharmaInitiative} -> ONA{b8cedfbd79c424a8e53b93746c70908c14721363a5e4e29e5731fab661add0aa}
