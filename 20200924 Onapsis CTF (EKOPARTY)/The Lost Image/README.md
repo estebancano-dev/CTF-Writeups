@@ -1,6 +1,6 @@
 > lost image
 
-File: [image.txt](https://github.com/estebancano-dev/CTF-Writeups/blob/master/20200924%20Onapsis%20CTF%20(EKOPARTY)/The%20Lost%20Image/image.txt?raw=true "image.txt")
+File: [image.txt](https://raw.githubusercontent.com/estebancano-dev/CTF-Writeups/master/20200924%20Onapsis%20CTF%20(EKOPARTY)/The%20Lost%20Image/thelostimage.txt "image.txt")
 
 The file format is
 
