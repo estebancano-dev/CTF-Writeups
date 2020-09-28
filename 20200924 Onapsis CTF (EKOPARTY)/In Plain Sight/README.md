@@ -7,7 +7,6 @@ Download and extract the file
 Use https://aperisolve.fr/ to check it.
 
 In the blue decoding, we can see the string `th1s_1s_n0t_th3_fl4g`, but thats not the flag yet
-descargar imagen
 
 Use https://futureboy.us/stegano/decinput.html with original image and `th1s_1s_n0t_th3_fl4g` as password, and click on "Prompt to save"
 
@@ -25,7 +24,7 @@ Maybe in plain sight?
 After all, it's said to be one of the best places to hide	 
 ```								   
 
-If we show all characters, we can see blank spaces and tabs at the end of every line. From past CTFs i know its encoded with `stegsnow`
+If we show all characters (i use notepad++ View->Show Symbols->Show All Characters), we can see blank spaces and tabs at the end of every line. From past CTFs i know its encoded with `stegsnow`
 
 So i executed `stegsnow -C out.txt` where `out.txt` has the above text
 
