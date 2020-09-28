@@ -24,7 +24,6 @@ So here comes the escaping nightmare: i made a script to automatize this in PHP 
 ```php
 <?php
 
-// run this shit in linux, windows does not scape characters well lol
 exec("7z x pass_the_parcel.zip;mv flag.txt flag0.txt");
 
 $i = 0;
