@@ -20,7 +20,7 @@ if we decode it all we can see `Created with GIMP` string (line 4). Its the head
 
 I made a script to concatenate every other line to this header and write it to a file, just to see what happens
 
-
+In PHP
 ```php
 <?php
 
@@ -33,6 +33,7 @@ while (($line = fgets($handle)) !== false) {
 }
 ```
 
+In Python
 ```python
 import base64
 
