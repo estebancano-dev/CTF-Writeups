@@ -43,6 +43,7 @@ while (true) {
 ```
 
 ```python
+#!/usr/bin/env python
 import os
 import base64
 import shlex # to escape shell args
