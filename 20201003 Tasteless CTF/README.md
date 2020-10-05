@@ -19,7 +19,7 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 
 So at offset 0xC2 there is another 7z file.
 
-Open the original 7z file with notepad++ for example and search for `7z`
+Open the original 7z file with notepad++ for example and search for `7z` (or extract it with `binwalk --dd='.*'`, it will create a folder named `_challenge.7z.extracted` and a file called `C2` inside, thats the 7z file we need)
 
 ![notepad.png](https://raw.githubusercontent.com/estebancano-dev/CTF-Writeups/master/20201003%20Tasteless%20CTF/notepad.png)
 
