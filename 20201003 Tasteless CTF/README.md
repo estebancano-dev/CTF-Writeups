@@ -1,6 +1,6 @@
 > 7/11Can you find the flag?
 >
-> ![Fig 1.- A meme](C:\Dropbox\dev\Github\CTF-Writeups\20201003 Tasteless CTF\2ugJxK3.png)
+> ![meme](https://raw.githubusercontent.com/estebancano-dev/CTF-Writeups/master/20201003%20Tasteless%20CTF/2ugJxK3.png)
 >
 > **Update:** The meme in the challenge description is NOT part of the challenge.
 >
@@ -21,7 +21,7 @@ So at offset 0xC2 there is another 7z file.
 
 Open the original 7z file with notepad++ for example and search for `7z`
 
-![image-20201003123750398](C:\Users\USER\AppData\Roaming\Typora\typora-user-images\image-20201003123750398.png)
+![notepad.png](https://raw.githubusercontent.com/estebancano-dev/CTF-Writeups/master/20201003%20Tasteless%20CTF/notepad.png)
 
 You can see selected the start of the other file. Delete all characters before that and save the file as `challenge2.7z`
 
