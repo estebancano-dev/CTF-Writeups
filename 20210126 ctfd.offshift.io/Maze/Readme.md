@@ -104,6 +104,8 @@ The string we put in cookie name's value is set as value of javascript's variabl
 
 We saw that appending `{{}}` to the name returns a 500 error. So, what about template injection then? The best way to confirm there is a template injection vulnerability is to enter math like `{{4*4}}` so when its rendered, the render engine does 4*4=16, so it returns 16.
 
+![16](16.png)
+
 It seems like the engine takes the value from the cookie and renders it without any validations.
 
 With the help of this image we managed to discover what template engine is used
